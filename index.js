@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => {
   res.send("hello express");
 });
-app.get("/papago", (req, res) => {
+app.post("/papago", (req, res) => {
   console.log(req.body.txt);
   const txt = req.body.txt;
   const language = req.body.language;
