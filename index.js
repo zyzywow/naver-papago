@@ -30,7 +30,7 @@ app.post("/papago", (req, res) => {
   const language = req.body.language;
   axios({
     url: "https://openapi.naver.com/v1/papago/n2mt",
-    method: "POST", // default는get
+    method: "get", // default는get
     params: {
       source: "ko",
       target: language,
