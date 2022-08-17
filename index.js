@@ -24,13 +24,13 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => {
   res.send("hello express");
 });
-app.post("/papago", (req, res) => {
+app.get("/papago", (req, res) => {
   console.log(req.body.txt);
   const txt = req.body.txt;
   const language = req.body.language;
   axios({
     url: "https://openapi.naver.com/v1/papago/n2mt",
-    method: "GET", // default는get
+    method: "POST", // default는get
     params: {
       source: "ko",
       target: language,
