@@ -9,6 +9,7 @@ const NAVER_SECRET_ID = process.env.NAVER_SECRET_ID;
 
 app.set("port", process.env.PORT || 8099);
 // process.env.PORT ->서버에서 이미 정해진 포트, 그포트가있으면 그것을 사용하거나 || 아니면 8099포트를 사용하겠다.
+
 const port = app.get("port");
 app.use(morgan("dev"));
 // ()자세히 ,("dev")간략히
